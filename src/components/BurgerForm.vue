@@ -1,7 +1,8 @@
 <template>
     <Banner/>
     <div>
-        <h1>Componente de Mensagem</h1>
+        <!-- A mensagem está condicionada a inserção de um burger quando for realizada. -->
+        <Message :msg="msg" v-show="msg" />
         <div>
             <form id="burger-form">
                 <div class="input-container">
@@ -50,6 +51,8 @@
 </template>
 
 <script>
+    import Message from "./Message.vue";
+
     export default {
     name: "BurgerForm",
     data() {
@@ -66,6 +69,9 @@
             msg: null,
 
         }
+    },
+    components: {
+        Message
     },
     methods: {
         // Método assincrono para pegar os ingredientes do back.
@@ -109,10 +115,11 @@
             const res = await req.json();
             // console.log(res);
 
-            // Colocar uma msg no sistema
+            // Colocar uma msg no sistema, é usado de template string.
+            this.msg = `Pedido N° ${res.id} realizado com sucesso.`
 
-            // Limpar msg
-
+            // Limpar msg, ele esvazia a string após 3s.
+            setTimeout(() => this.msg = "", 3000);
             // Limpar os campos:
             this.nome = "";
             this.carne = "";

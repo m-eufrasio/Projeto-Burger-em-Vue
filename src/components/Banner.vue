@@ -24,10 +24,10 @@
   }
 
   #main-banner h1 {
-    color: #FFF;
+    color: rgb(0, 0, 0);
     text-align: center;
     font-size: 60px;
-    background-color: #222;
+    background-color: #fcba03;
     padding: 20px 40px;
   }
 </style>

@@ -102,24 +102,25 @@
       "id": 4
     },
     {
-      "nome": "teste",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        null
-      ],
-      "status": "Solicitado",
-      "id": 5
-    },
-    {
       "nome": "Joao",
       "carne": "Veggie burger",
       "pao": "Integral",
       "opcionais": [
         "Tomate"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 6
+    },
+    {
+      "nome": "Cleuson",
+      "carne": "Picanha",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Cheddar",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 7
     }
   ]
 }
